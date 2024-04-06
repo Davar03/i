@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download Labs PDF</title>
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<button class="button" onclick="downloadPDF()">Download Labs PDF</button>
+
+<script>
+function downloadPDF() {
+    // Define the file URL
+    var fileURL = "/labs.pdf"; // Replace with the actual path to your PDF file
+    
+    // Create anchor element
+    var downloadLink = document.createElement("a");
+    downloadLink.href = fileURL;
+    downloadLink.download = "labs.pdf";
+    
+    // Append anchor to body
+    document.body.appendChild(downloadLink);
+    
+    // Trigger the click event
+    downloadLink.click();
+    
+    // Clean up
+    document.body.removeChild(downloadLink);
+}
+</script>
+
+</body>
+</html>
