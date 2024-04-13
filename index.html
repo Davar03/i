@@ -6,7 +6,7 @@
 <title>Download Labs PDF</title>
 <style>
 .button {
-  background-color: #2986cc; /* Green */
+  background-color: #2786cc; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -32,13 +32,14 @@
 <script>
 function downloadPDF() {
     // Define the file URL
-    var fileURL = "/labs.pdf"; // Replace with the actual path to your PDF file
+    var fileURL = "/files/my_labs.pdf";
+
     
     // Create anchor element
     var downloadLink = document.createElement("a");
     downloadLink.href = fileURL;
-    downloadLink.download = "/labs.pdf";
-    
+    downloadLink.download = "labs.pdf";
+
     // Append anchor to body
     document.body.appendChild(downloadLink);
     
